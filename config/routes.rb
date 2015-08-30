@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/show'
+
   resources :ideas
   devise_for :users
   root 'pages#home'
