@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830202200) do
+ActiveRecord::Schema.define(version: 20150830211653) do
 
   create_table "ideas", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20150830202200) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "tagline"
+    t.string   "story"
   end
 
   add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
@@ -40,6 +42,9 @@ ActiveRecord::Schema.define(version: 20150830202200) do
     t.string   "last_name"
     t.string   "year"
     t.string   "college"
+    t.string   "bio"
+    t.string   "values"
+    t.string   "interests"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

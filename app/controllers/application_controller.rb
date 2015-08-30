@@ -13,6 +13,13 @@ class ApplicationController < ActionController::Base
    devise_parameter_sanitizer.for(:account_update) << :last_name
    devise_parameter_sanitizer.for(:sign_up) << :college
    devise_parameter_sanitizer.for(:account_update) << :college
+   devise_parameter_sanitizer.for(:sign_up) << :bio
+   devise_parameter_sanitizer.for(:account_update) << :bio
+   devise_parameter_sanitizer.for(:sign_up) << :values
+   devise_parameter_sanitizer.for(:account_update) << :values
+   devise_parameter_sanitizer.for(:sign_up) << :interests
+   devise_parameter_sanitizer.for(:account_update) << :interests
+
 
   end
 end

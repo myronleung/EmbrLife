@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'user/show'
-
   resources :ideas
+
   devise_for :users
+  get 'users/:id' => 'users#show', as: :user
+
   root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
